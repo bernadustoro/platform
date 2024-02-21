@@ -13,27 +13,41 @@ body {
 
 .side {
     flex: 1;
-    background-color: #4b4276;
-    padding: 70px;
+    background-color: #482356;
+    width: 200px;
     position: fixed;
     height: 100%;
 }
 
-.side h2 {
-    text-align: center;
+.side header {
     color: #f3f5f9;
-    margin-top: -10px;
+    text-align: center;
     text-transform: uppercase;
+    background: violet;
+    line-height: 100px;
+    font-size: 30px;
+    font-family: 'Segoe UI';
 }
 
-.wrap .side li a {
-    color: black;
+.side ul a {
+    color: #000;
+    height: 100%;
+    width: 70%;
+    display: block;
+    line-height: 60px;
+    padding-left: 30px;
+    box-sizing: border-box;
+    border-top: 1px solid rgba(255, 255, 255, .6);
+    border-bottom: 1px solid rgba(255, 255, 255, .6);
+    transition: .5s;
+}
+
+ul li:hover a {
+    padding-left: 60px;
 }
 
 .side ul {
     list-style-type: none;
-    padding-left: 2px;
-    line-height: 50px;
 }
 
 .bio {
