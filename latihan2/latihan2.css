@@ -26,12 +26,22 @@ body {
     text-transform: uppercase;
 }
 
-.konten {
-    width: 100%;
-    margin-left: 220px;
+.wrap .side li a {
+    color: black;
 }
 
-.konten h4 {
+.side ul {
+    list-style-type: none;
+    padding-left: 2px;
+    line-height: 50px;
+}
+
+.bio {
+    width: 100%;
+    margin-left: 280px;
+}
+
+.bio h4 {
     text-align: center;
     margin-top: 70px;
     text-transform: uppercase;
