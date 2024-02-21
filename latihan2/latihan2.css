@@ -1,0 +1,38 @@
+body {
+    background-color: #f3f5f9;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.wrap {
+    display: flex;
+    position: relative;
+    height: 100%;
+}
+
+.side {
+    flex: 1;
+    background-color: #4b4276;
+    padding: 70px;
+    position: fixed;
+    height: 100%;
+}
+
+.side h2 {
+    text-align: center;
+    color: #f3f5f9;
+    margin-top: -10px;
+    text-transform: uppercase;
+}
+
+.konten {
+    width: 100%;
+    margin-left: 220px;
+}
+
+.konten h4 {
+    text-align: center;
+    margin-top: 70px;
+    text-transform: uppercase;
+}
