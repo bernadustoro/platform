@@ -8,12 +8,10 @@ body {
 .wrap {
     display: flex;
     position: relative;
-    height: 100%;
 }
 
 .side {
-    flex: 1;
-    background-color: #482356;
+    background: rgba(0, 0, 0, 0.63);
     width: 200px;
     position: fixed;
     height: 100%;
@@ -31,19 +29,50 @@ body {
 
 .side ul a {
     color: #000;
-    height: 100%;
-    width: 70%;
+    width: 90%;
     display: block;
     line-height: 60px;
-    padding-left: 30px;
+    padding-left: 10px;
     box-sizing: border-box;
     border-top: 1px solid rgba(255, 255, 255, .6);
     border-bottom: 1px solid rgba(255, 255, 255, .6);
     transition: .5s;
+    text-decoration: none;
 }
 
 ul li:hover a {
-    padding-left: 60px;
+    padding-left: 50px;
+}
+
+.side ul li a .fa-solid {
+    width: 25px;
+}
+
+.side ul li a .imagehome {
+    width: 19px;
+    height: 20px;
+    margin-right: 8px;
+    margin-bottom: -2px;
+}
+
+.side ul li a .imagebio {
+    width: 17px;
+    height: 20px;
+    margin-right: 8px;
+}
+
+.side ul li a .imagepre {
+    width: 17px;
+    height: 21px;
+    margin-right: 8px;
+    margin-bottom: -3px;
+}
+
+.side ul li a .imagegal {
+    width: 19px;
+    height: 21px;
+    margin-right: 8px;
+    margin-bottom: -3px;
 }
 
 .side ul {
