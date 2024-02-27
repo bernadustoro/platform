@@ -10,7 +10,7 @@ body {
 }
 
 .side {
-    background: rgba(0, 0, 0, 0.63);
+    background: linear-gradient(to bottom, #b06b6b, #657aa4, #85b999);
     width: 230px;
     position: fixed;
     height: 100%;
@@ -86,7 +86,7 @@ ul li:hover a {
 .sosialmedia {
     margin-top: 90%;
     margin-left: 35px;
-    display: inline-flex;
+    display: flex;
 }
 
 .sosialmedia .icon {
@@ -150,6 +150,7 @@ section {
     display: flex;
     margin-left: 15.1%;
     flex-direction: column;
+    position: relative;
 }
 
 .contain {
