@@ -6,7 +6,6 @@ body {
 }
 
 .wrap {
-    display: flex;
     position: relative;
 }
 
@@ -147,8 +146,20 @@ ul li:hover a {
     pointer-events: auto;
 }
 
-.bio h4 {
-    text-align: center;
-    margin-top: 70px;
-    text-transform: uppercase;
+section {
+    display: flex;
+    margin-left: 15.1%;
+    flex-direction: column;
+}
+
+.contain {
+    width: 70%;
+    height: 100cm;
+    background: #000;
+}
+
+.cont {
+    width: 70%;
+    height: 100cm;
+    background: aqua;
 }
