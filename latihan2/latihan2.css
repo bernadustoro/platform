@@ -1,12 +1,11 @@
 body {
-    background-color: #f3f5f9;
     margin: 0;
-    height: 100%;
 }
 
 .wrap {
     position: relative;
     overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 .side {
@@ -41,10 +40,6 @@ body {
 ul li:hover a {
     padding-left: 50px;
     background-color: rgba(0, 0, 0, 0.1);
-}
-
-.side ul li a .fa-solid {
-    width: 25px;
 }
 
 .side ul li a .imagehome {
@@ -84,7 +79,7 @@ ul li:hover a {
 }
 
 .sosialmedia {
-    margin-top: 90%;
+    margin-top: 100%;
     margin-left: 35px;
     display: flex;
 }
@@ -153,30 +148,100 @@ section {
 }
 
 .contain {
-    width: 70%;
+    width: 700%;
     height: 20cm;
+    background: linear-gradient(to bottom, #6daabf, #b38acb);
 }
 
-.contain .atas {
-    width: 700%;
-    height: 10cm;
-    background: linear-gradient(to bottom, #6daabf, #b38acb);
+.contain .atas a {
+    position: relative;
+    margin-left: 13cm;
+    width: 5.2cm;
+    height: 5.2cm;
+    background: #f3f5f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 60%;
+    margin-top: -2.8cm;
 }
 
 .contain .atas .img {
-    width: 60px;
-    height: 50px;
-    margin-top: 350px;
+    width: 5cm;
+    height: 5cm;
+    border-radius: 60%;
+    -webkit-border-radius: 60%;
+    -moz-border-radius: 60%;
+    -ms-border-radius: 60%;
+    -o-border-radius: 60%;
+    animation: fade 5s forwards;
 }
 
-.contain .bawah {
-    width: 700%;
-    height: 10cm;
-    background: linear-gradient(to bottom, #6daabf, #b38acb);
+.contain .atas .line {
+    margin-top: 8cm;
+    background-color: #FFFFFF;
+    width: 39cm;
+    margin-left: -1cm;
+    height: 4px;
+}
+
+.contain .atas .text {
+    margin-left: 420px;
+    margin-top: 1cm;
+    font-family: Helvetica;
+    font-size: 15px;
+    animation: fade 5s forwards;
+    position: relative;
+    white-space: nowrap;
+    overflow: hidden;
+    -webkit-animation: fade 5s forwards;
+    font-style: italic;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 .cont {
     width: 100%;
     height: 30cm;
-    background: aqua;
+    background: linear-gradient(to bottom, #b38acb, #6daabf);
+}
+
+.cont .tabel p {
+    text-align: justify;
+    box-sizing: border-box;
+    display: block;
+    backdrop-filter: blur(40px);
+    line-height: 60px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+    border-width: 2px;
+}
+
+.cont .tabel {
+    margin-top: 10%;
+    box-sizing: border-box;
+    border-top: 1px solid rgba(255, 255, 255, 0.6);
+    border-left: 1px solid rgba(255, 255, 255, 0.6);
+    display: block;
+    margin-left: 20%;
+    margin-right: 20%;
+    border-width: 2px;
+}
+
+.contpre {
+    width: 100%;
+    height: 30cm;
+    background: #31252d;
+}
+
+.contgal {
+    width: 100%;
+    height: 30cm;
+    background: linear-gradient(to bottom, #78235c, #7e488e);
 }
