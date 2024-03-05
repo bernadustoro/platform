@@ -242,8 +242,33 @@ section {
 
 .contpre {
     width: 100%;
-    height: 30cm;
+    height: 50cm;
     background: linear-gradient(to bottom, #6daabf, #b38acb);
+}
+
+.contpre h4 {
+    text-align: center;
+}
+
+.contpre h5 {
+    margin-left: 15px;
+}
+
+.contpre table {
+    margin-right: 15px;
+    border-collapse: collapse;
+    width: 35cm;
+    margin-left: 15px;
+}
+
+.contpre th,
+td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    img {
+        width: 60px;
+    }
 }
 
 .contgal {
