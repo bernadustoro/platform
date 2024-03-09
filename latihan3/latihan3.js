@@ -22,18 +22,25 @@ function inputPilih() {
         e.parentNode.removeChild(e);
     });
 
-    let batas = parseInt(inputPilihan.value.trim());
+    var batas = parseInt(inputPilihan.value.trim());
     for (let index = 0; index < batas; index++) {
         const pilih = document.createElement('div');
-        pilih.classList.add('form-group')
+        pilih.classList.add('form-group');
 
         const label = document.createElement('label');
         label.textContent = 'pilihan' + (index + 1) + ':';
         label.setAttribute('for', 'pilihan');
 
+        const input = document.createElement('input');
+        input.type = 'text';
+        input.setAttribute('id', 'pilihan');
+
         pilih.appendChild(label);
+        pilih.appendChild(input);
         container.appendChild(pilih);
     }
+
+
 }
 
 btn.addEventListener('click', tombolTekan);
