@@ -4,10 +4,13 @@ var container = document.querySelector('.contain')
 const btn = document.querySelector('#btn');
 
 var tamp = [];
+var pilihan;
+
+btn.addEventListener('click', tombolTekan);
 
 function tombolTekan() {
     var nama = inputNama.value.trim();
-    var pilihan = inputPilihan.value;
+    pilihan = inputPilihan.value;
     if (nama == '' || pilihan == '') {
         alert('jangan ada yang kosong');
     } else {
@@ -35,12 +38,50 @@ function inputPilih() {
         input.type = 'text';
         input.setAttribute('id', 'pilihan');
 
+
         pilih.appendChild(label);
         pilih.appendChild(input);
         container.appendChild(pilih);
     }
+    const ok = document.createElement('button');
+    ok.type = 'submit';
+    ok.setAttribute('id', 'btnOK');
+    ok.textContent = 'OK';
+    container.appendChild(ok);
 
+    const okb = document.querySelector('#btnOK');
+    okb.addEventListener('click', function(e) {
+        const inp = document.querySelectorAll('#pilihan')
+        for (let index = 0; index < inp.length; index++) {
+            tamp[index] = inp[index].value;
 
+        }
+        inputHobi();
+        ok.disabled = true;
+    });
 }
 
-btn.addEventListener('click', tombolTekan);
+function inputHobi() {
+    const containDrop = document.createElement('div');
+    containDrop.setAttribute('class', 'form-group');
+
+    const hobiLabel = document.createElement('label');
+    hobiLabel.textContent = 'Hobi';
+    hobiLabel.setAttribute('for', 'hobi');
+
+    const hobiSelect = document.createElement('select');
+    hobiSelect.setAttribute('id', 'hobi');
+
+    const hobi = ['membaca', 'sepakbola'];
+
+    hobi.forEach(function(hobi) {
+        const optionElement = document.createElement('option');
+        optionElement.textContent = hobi;
+        // optionElement.value = hobi;
+        hobiSelect.appendChild(optionElement);
+    });
+
+    containDrop.appendChild(hobiLabel);
+    containDrop.appendChild(hobiSelect);
+    container.appendChild(containDrop);
+}

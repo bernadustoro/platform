@@ -27,7 +27,7 @@ input[type="number"] {
     padding: 3px;
 }
 
-.masuk {
-    width: 40px;
-    margin: 0 auto;
+#hobi {
+    padding-left: -270cm;
+    flex: 2;
 }
