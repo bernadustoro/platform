@@ -1,0 +1,33 @@
+body {
+    width: 50cm;
+    height: 50cm;
+    overflow-x: hidden;
+}
+
+.contain {
+    width: 10cm;
+    height: 10cm;
+    background-color: aqua;
+    padding: 20px;
+    margin-left: 10%;
+}
+
+.form-group {
+    display: flex;
+    padding: 5px;
+}
+
+label {
+    flex: 1;
+}
+
+input[type="text"],
+input[type="number"] {
+    flex: 2;
+    padding: 3px;
+}
+
+.masuk {
+    width: 40px;
+    margin: 0 auto;
+}
