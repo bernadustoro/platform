@@ -81,7 +81,36 @@ function inputHobi() {
         hobiSelect.appendChild(optionElement);
     });
 
+    const defaultOption = document.createElement('option');
+    defaultOption.textContent = 'Pilih Hobi';
+    defaultOption.setAttribute('disabled', 'disabled');
+    defaultOption.setAttribute('selected', 'selected');
+    hobiSelect.insertBefore(defaultOption, hobiSelect.firstChild);
+
     containDrop.appendChild(hobiLabel);
     containDrop.appendChild(hobiSelect);
     container.appendChild(containDrop);
+
+    const ok1 = document.createElement('button');
+    ok1.type = 'submit';
+    ok1.setAttribute('id', 'btn_ok');
+    ok1.textContent = 'submit';
+    container.appendChild(ok1);
+
+    const tombol_OK = document.querySelector('#btn_ok');
+    tombol_OK.addEventListener('click', function(e) {
+        const nama = inputNama.value;
+        const jmlpil = inputPilihan.value;
+        var txtARy = '';
+
+        for (let i = 0; i < tamp.length; i++) {
+            txtARy += ' pilihan ' + (i + 1) + ' ' + tamp[i] + ', ';
+
+        }
+
+        const hb = document.getElementById('hobi');
+        const Hobi = hb.value;
+        const txt = "<p>" + 'saya ' + nama + ' memilih pilihan sejumlah ' + jmlpil + ' meliputi ' + txtARy + 'Memiliki hobi ' + Hobi + "</p>";
+        container.innerHTML = txt;
+    });
 }
