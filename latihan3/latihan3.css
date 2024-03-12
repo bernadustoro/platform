@@ -6,7 +6,7 @@ body {
 
 .contain {
     width: 10cm;
-    height: 10cm;
+    height: auto;
     background-color: aqua;
     padding: 20px;
     margin-left: 10%;
@@ -30,4 +30,8 @@ input[type="number"] {
 #hobi {
     padding-left: -270cm;
     flex: 2;
+}
+
+h4 {
+    text-align: center;
 }

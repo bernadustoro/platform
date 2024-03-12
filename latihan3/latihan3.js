@@ -5,6 +5,7 @@ const btn = document.querySelector('#btn');
 
 var tamp = [];
 var pilihan;
+var txtARy = '';
 
 btn.addEventListener('click', tombolTekan);
 
@@ -101,7 +102,6 @@ function inputHobi() {
     tombol_OK.addEventListener('click', function(e) {
         const nama = inputNama.value;
         const jmlpil = inputPilihan.value;
-        var txtARy = '';
 
         for (let i = 0; i < tamp.length; i++) {
             txtARy += ' pilihan ' + (i + 1) + ' ' + tamp[i] + ', ';
@@ -111,6 +111,6 @@ function inputHobi() {
         const hb = document.getElementById('hobi');
         const Hobi = hb.value;
         const txt = "<p>" + 'saya ' + nama + ' memilih pilihan sejumlah ' + jmlpil + ' meliputi ' + txtARy + 'Memiliki hobi ' + Hobi + "</p>";
-        container.innerHTML = txt;
+        container.insertAdjacentHTML('beforeend', txt);
     });
 }
