@@ -58,7 +58,7 @@ function inputPilih() {
 
         }
         inputHobi();
-        ok.disabled = true;
+        okb.disabled = true;
     });
 }
 
@@ -108,6 +108,7 @@ function inputHobi() {
 
         }
 
+        tombol_OK.disabled = true;
         const hb = document.getElementById('hobi');
         const Hobi = hb.value;
         const txt = "<p>" + 'saya ' + nama + ' memilih pilihan sejumlah ' + jmlpil + ' meliputi ' + txtARy + 'Memiliki hobi ' + Hobi + "</p>";

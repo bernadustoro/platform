@@ -7,9 +7,9 @@ body {
 .contain {
     width: 10cm;
     height: auto;
+    margin: 10% 10%;
     background-color: aqua;
     padding: 20px;
-    margin-left: 10%;
 }
 
 .form-group {

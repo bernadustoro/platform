@@ -1,0 +1,33 @@
+.header-global {
+    width: 100%;
+    height: 2cm;
+}
+
+.header-pc {
+    width: 7cm;
+    height: 2cm;
+    margin-left: 4cm;
+}
+
+.grobal-pc-menu {
+    width: 15cm;
+    margin-left: 60%;
+    margin-top: -1.5cm;
+}
+
+.Login-Reg {
+    text-decoration: none;
+    color: red;
+}
+
+.image-header {
+    width: 3cm;
+    height: 2cm;
+}
+
+.header-pc h1 {
+    color: red;
+    font-size: 15px;
+    margin-left: 2.5cm;
+    margin-top: -1cm;
+}
