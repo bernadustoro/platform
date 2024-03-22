@@ -88,6 +88,11 @@
 
 .carousel-item {
     display: flexbox !important;
+    transition: transform .5s ease-in-out !important;
+    -webkit-transition: transform .5s ease-in-out !important;
+    -moz-transition: transform .5s ease-in-out !important;
+    -ms-transition: transform .5s ease-in-out !important;
+    -o-transition: transform .5s ease-in-out !important;
 }
 
 .carousel-item img {
