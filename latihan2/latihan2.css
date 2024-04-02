@@ -1,0 +1,293 @@
+body {
+    margin: 0;
+}
+
+.wrap {
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.side {
+    background: linear-gradient(to bottom, #b06b6b, #657aa4, #85b999);
+    width: 230px;
+    position: fixed;
+    height: 100%;
+}
+
+.side header {
+    color: #f3f5f9;
+    text-align: center;
+    background: rgb(161, 157, 161);
+    line-height: 100px;
+    font-size: 30px;
+    font-family: 'Segoe UI';
+}
+
+.side ul a {
+    color: #000;
+    width: 90%;
+    display: block;
+    line-height: 60px;
+    padding-left: 10px;
+    box-sizing: border-box;
+    border-top: 1px solid rgba(255, 255, 255, .6);
+    border-bottom: 1px solid rgba(255, 255, 255, .6);
+    transition: .5s;
+    text-decoration: none;
+}
+
+ul li:hover a {
+    padding-left: 50px;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.side ul li a .imagehome {
+    width: 19px;
+    height: 20px;
+    margin-right: 8px;
+    margin-bottom: -2px;
+}
+
+.side ul li a .imagebio {
+    width: 17px;
+    height: 20px;
+    margin-right: 8px;
+}
+
+.side ul li a .imagepre {
+    width: 17px;
+    height: 21px;
+    margin-right: 8px;
+    margin-bottom: -3px;
+}
+
+.side ul li a .imagegal {
+    width: 19px;
+    height: 21px;
+    margin-right: 8px;
+    margin-bottom: -3px;
+}
+
+.side ul {
+    list-style-type: none;
+}
+
+.bio {
+    width: 100%;
+    margin-left: 280px;
+}
+
+.sosialmedia {
+    margin-top: 100%;
+    margin-left: 35px;
+    display: flex;
+}
+
+.sosialmedia .icon {
+    margin: 0 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+}
+
+.ig {
+    width: 20px;
+}
+
+.sosialmedia .icon a {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    height: 30px;
+    width: 30px;
+    display: block;
+    background: #fff;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 30%;
+    -webkit-border-radius: 30%;
+    -moz-border-radius: 30%;
+    -ms-border-radius: 30%;
+    -o-border-radius: 30%;
+}
+
+.sosialmedia .icon a span {
+    font-size: 25px;
+    line-height: 130%;
+}
+
+.sosialmedia .icon .text {
+    background: #fff;
+    font-size: 15px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    padding: 2px 10px;
+    border-radius: 50px;
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+    top: -30px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+}
+
+.sosialmedia .icon:hover .text {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+section {
+    display: flex;
+    margin-left: 15.1%;
+    flex-direction: column;
+}
+
+.contain {
+    width: 700%;
+    height: 20cm;
+    background: linear-gradient(to bottom, #6daabf, #b38acb);
+}
+
+.contain .atas a {
+    position: relative;
+    margin-left: 13cm;
+    width: 5.2cm;
+    height: 5.2cm;
+    background: #f3f5f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 60%;
+    margin-top: -2.8cm;
+}
+
+.contain .atas .img {
+    width: 5cm;
+    height: 5cm;
+    border-radius: 60%;
+    -webkit-border-radius: 60%;
+    -moz-border-radius: 60%;
+    -ms-border-radius: 60%;
+    -o-border-radius: 60%;
+    animation: fade 5s forwards;
+}
+
+.contain .atas .line {
+    margin-top: 8cm;
+    background-color: #FFFFFF;
+    width: 39cm;
+    margin-left: -1cm;
+    height: 4px;
+}
+
+.contain .atas .text {
+    margin-left: 420px;
+    margin-top: 1cm;
+    font-family: Helvetica;
+    font-size: 15px;
+    animation: fade 5s forwards;
+    position: relative;
+    white-space: nowrap;
+    overflow: hidden;
+    -webkit-animation: fade 5s forwards;
+    font-style: italic;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.cont {
+    width: 100%;
+    height: 30cm;
+    background: linear-gradient(to bottom, #b38acb, #6daabf);
+}
+
+.cont .tabel p {
+    text-align: justify;
+    box-sizing: border-box;
+    display: block;
+    backdrop-filter: blur(40px);
+    line-height: 60px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+    border-width: 2px;
+}
+
+.cont .tabel {
+    margin-top: 10%;
+    box-sizing: border-box;
+    border-top: 1px solid rgba(255, 255, 255, 0.6);
+    border-left: 1px solid rgba(255, 255, 255, 0.6);
+    border-right: 1px solid rgba(255, 255, 255, 0.6);
+    display: block;
+    margin-left: 20%;
+    margin-right: 20%;
+    border-width: 2px;
+}
+
+.cont .bio {
+    text-align: center;
+    margin-left: 10px;
+}
+
+.contpre {
+    width: 100%;
+    height: 50cm;
+    background: linear-gradient(to bottom, #6daabf, #b38acb);
+}
+
+.contpre h4 {
+    text-align: center;
+}
+
+.contpre h5 {
+    margin-left: 15px;
+}
+
+.contpre table {
+    margin-right: 15px;
+    border-collapse: collapse;
+    width: 35cm;
+    margin-left: 15px;
+}
+
+.contpre th,
+td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    img {
+        width: 60px;
+    }
+}
+
+.contpre table tr:hover td {
+    background-color: rgba(22, 40, 52, 0.3)
+}
+
+.contgal {
+    width: 100%;
+    height: 38cm;
+    background: linear-gradient(to bottom, #b38acb, #6daabf);
+}
+
+.contgal .img {
+    width: 10cm;
+    height: 12cm;
+    padding: 10px;
+    border-radius: 11%;
+    -webkit-border-radius: 11%;
+    -moz-border-radius: 11%;
+    -ms-border-radius: 11%;
+    -o-border-radius: 11%;
+}

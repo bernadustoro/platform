@@ -1,0 +1,105 @@
+body {
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+.header-global {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(70, 77, 84);
+}
+
+.header-pc h1 {
+    color: rgb(232, 236, 236);
+}
+
+.nav {
+    width: 100%;
+    background-color: rgb(21, 20, 20);
+}
+
+.nav-link {
+    color: aliceblue;
+}
+
+.nav-item {
+    border-right: 1px solid white;
+}
+
+.nav-pills .nav-link.active {
+    background-color: rgb(15, 14, 14);
+    text-decoration: underline;
+    color: aliceblue;
+}
+
+#pills-beranda {
+    height: 20cm;
+}
+
+#beranda {
+    background: linear-gradient(to bottom, #b8cacf, #2e2b30);
+    height: 16.75cm;
+    display: block;
+}
+
+#beranda img {
+    margin-top: 2cm;
+    border: 3px solid white;
+}
+
+#info {
+    width: 10cm;
+    height: 5cm;
+    background-color: rgb(156, 159, 159);
+    margin: -35px auto;
+    border: 3px solid white;
+}
+
+#info .info-text {
+    padding-top: 40px;
+}
+
+#tentang-main h6 {
+    margin-top: 1cm;
+}
+
+#tentang-main p {
+    margin-top: 1cm;
+}
+
+#cont-tentang {
+    background-color: aquamarine;
+    height: 19cm;
+    width: 20cm;
+}
+
+.contain-tugas {
+    width: 14cm;
+    height: auto;
+    background-color: aqua;
+    padding: 20px;
+}
+
+.form-group {
+    display: flex;
+    padding: 5px;
+}
+
+label {
+    flex: 1;
+}
+
+input[type="text"],
+input[type="number"] {
+    flex: 2;
+    padding: 3px;
+}
+
+#hobi {
+    padding-left: -270cm;
+    flex: 2;
+}
+
+h4 {
+    text-align: center;
+}
