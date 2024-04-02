@@ -1,3 +1,7 @@
+<?php 
+    $conn = mysqli_connect('localhost','root','','platform');
+    $result = mysqli_query($conn, "SELECT * FROM user");
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,9 +12,9 @@
 </head>
 
 <body>
-    <?php
-    echo '<h1> hallo adri</h1>';
-    ?>
+    <?php while ($rows= mysqli_fetch_assoc($result)):?>
+        <p><?php echo $rows["username"];?></p>
+    <?php endwhile;?>
 </body>
 
 </html>
