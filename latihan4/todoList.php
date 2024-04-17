@@ -1,3 +1,20 @@
+<?php 
+    require 'koneksi.php';
+    $error ='';
+    if (isset($_POST['tambah'])){
+        if (!empty($_POST['todo'])){
+            tambahTodo($_POST);
+            header("Location: todoList.php");
+            exit();
+        } else {
+            echo "<script> 
+                  alert('data harus diisi');
+                  </script>";
+        }
+    }
+
+    $text = query("SELECT todolist FROM todo");
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,20 +27,16 @@
     <form action="" method="post">
         <div class="container">
             <div class="tambah-todo">
-                <input type="text" placeholder="Teks todo">
-                <button class="tambah"> Tambah</button>
+                <input type="text" name="todo" placeholder="Teks todo">
+                <button class="tambah" name="tambah"> Tambah</button>
             </div>
-            <?php 
-            $a=1;
-            while ($a <= 10):?>
+            <?php foreach ($text as $isi):?>
             <div class="show-todo">
-                <input type="text" placeholder="Teks todo" readonly>
+                <input type="text" value="<?php echo $isi['todolist']; ?>" readonly>
                 <button class="tambah">Selesai</button>
                 <button class="tambah">Hapus</button>
             </div>
-            <?php 
-            $a++;
-            endwhile;?>
+            <?php endforeach;?>
         </div>
     </form>
 </body>
