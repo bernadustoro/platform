@@ -1,6 +1,7 @@
 <?php 
+    require 'koneksi.php';
     if (isset($_POST['submitbtn'])) {
-        header("Location: login.php");
+        tambahAkun($_POST);
     }
 ?>
 <!DOCTYPE html>
