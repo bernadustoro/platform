@@ -3,6 +3,8 @@
 
     if (isset($_POST['regiss'])) {
         header("Location: register.php");
+    } elseif(isset($_POST['loginbtn'])){
+        login($_POST);
     }
 ?>
 <!DOCTYPE html>
