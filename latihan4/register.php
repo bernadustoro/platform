@@ -1,5 +1,12 @@
 <?php 
     require 'koneksi.php';
+
+    session_start();
+    if (!isset($_SESSION["regis"])) {
+        header("Location: login.php");
+        exit(); 
+    }
+
     if (isset($_POST['submitbtn'])) {
         tambahAkun($_POST);
     }

@@ -1,10 +1,9 @@
 <?php 
     session_start();
-
-    if(isset($_SESSION["login"])){
-        header("Location: todoList.php");
-        exit();
-    } 
+    if (!isset($_SESSION["login"])) {
+        header("Location: login.php");
+        exit(); 
+    }
     require 'koneksi.php';
     $error ='';
     $kls = '';
