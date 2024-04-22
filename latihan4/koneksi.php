@@ -1,4 +1,6 @@
 <?php 
+     session_start();
+    
     $conn = mysqli_connect('localhost','root','','platform');
     
     function tambahAkun($data){
@@ -42,6 +44,7 @@
             $row = mysqli_fetch_assoc($result);
 
             if (password_verify($password,$row["password"])) {
+                $_SESSION["login"] = true;
                 header("Location: todoList.php");
             } else {
                 echo "<script>
@@ -55,7 +58,7 @@
         global $conn;
         $text = $data['todo'];
 
-        $query = "INSERT INTO todo VALUES('','$text','')";
+        $query = "INSERT INTO todo VALUES('','$text','onprocess')";
 
         mysqli_query($conn,$query);
         
@@ -69,5 +72,32 @@
             $datas[] = $row;
         }
         return $datas;
+    }
+
+    function hapus($data,$index){
+        global $conn;
+        $isi = $data['isi'.$index];
+        $query = "SELECT status FROM todo WHERE todolist = '$isi'";
+        $result = mysqli_query($conn, $query);
+        if ($result) {
+            $row = mysqli_fetch_assoc($result);
+            if ($row['status'] == 'onprocess') {
+                echo "<script>alert('Data tidak dapat dihapus karena status masih onprocess harap klik selesai dahulu');</script>";
+            } else {
+                $deleteQuery = "DELETE FROM todo WHERE todolist = '$isi'";
+                mysqli_query($conn, $deleteQuery);
+                echo "<script>alert('Data berhasil dihapus');</script>";
+            }
+        } else {
+            echo "<script>alert('Terjadi kesalahan dalam mengambil status data');</script>";
+        }
+    }
+
+    function selesai($data,$index){
+        global $conn;
+        $isi = $data['isi'.$index];
+        $query = "UPDATE todo SET status = 'selesai' WHERE todolist = '$isi'";
+        mysqli_query($conn,$query);
+        return 'selesai';
     }
 ?>

@@ -15,3 +15,7 @@
     width: 7cm;
     height: 20px;
 }
+
+.show-todo .selesai {
+    text-decoration: line-through;
+}

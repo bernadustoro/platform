@@ -1,6 +1,13 @@
 <?php 
+    session_start();
+
+    if(isset($_SESSION["login"])){
+        header("Location: todoList.php");
+        exit();
+    } 
     require 'koneksi.php';
     $error ='';
+    $kls = '';
     if (isset($_POST['tambah'])){
         if (!empty($_POST['todo'])){
             tambahTodo($_POST);
@@ -10,6 +17,21 @@
             echo "<script> 
                   alert('data harus diisi');
                   </script>";
+        }
+    }
+
+    foreach ($_POST as $key => $value) {
+        if (strpos($key, 'hapus') !== false) {
+            $index = substr($key, strlen('hapus')); 
+            hapus($_POST, $index);
+        }
+    }
+
+    
+    foreach ($_POST as $key => $value) {
+        if (strpos($key, 'selesai') !== false) {
+            $index = substr($key, strlen('selesai')); 
+            $kls = selesai($_POST, $index);
         }
     }
 
@@ -30,14 +52,18 @@
                 <input type="text" name="todo" placeholder="Teks todo">
                 <button class="tambah" name="tambah"> Tambah</button>
             </div>
-            <?php foreach ($text as $isi):?>
+            <?php foreach ($text as $index => $isi):?>
             <div class="show-todo">
-                <input type="text" value="<?php echo $isi['todolist']; ?>" readonly>
-                <button class="tambah">Selesai</button>
-                <button class="tambah">Hapus</button>
+                <input type="text" name = "isi<?php echo $index;?>" value="<?php echo $isi['todolist']; ?>" class="<?php echo $kls;?>" >
+                <button class="tambah" name= "selesai<?php echo $index;?>">Selesai</button>
+                <button class="tambah" name= "hapus<?php echo $index;?>">Hapus</button>
+                <input type="hidden" name="index" value="<?php echo $index; ?>">
             </div>
             <?php endforeach;?>
         </div>
     </form>
 </body>
+<?php 
+
+?>
 </html>
