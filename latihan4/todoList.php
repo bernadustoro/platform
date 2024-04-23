@@ -6,10 +6,11 @@
     }
     require 'koneksi.php';
     $error ='';
-    $kls = '';
+    $kls = 'b';
+    $username = $_SESSION['user'];
     if (isset($_POST['tambah'])){
         if (!empty($_POST['todo'])){
-            tambahTodo($_POST);
+            tambahTodo($_POST,$username);
             header("Location: todoList.php");
             exit();
         } else {
@@ -34,7 +35,8 @@
         }
     }
 
-    $text = query("SELECT todolist FROM todo");
+    
+    $text = query($username);
 ?>
 <!DOCTYPE html>
 <html lang="en">
