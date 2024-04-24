@@ -31,7 +31,7 @@
     foreach ($_POST as $key => $value) {
         if (strpos($key, 'selesai') !== false) {
             $index = substr($key, strlen('selesai')); 
-            $kls = selesai($_POST, $index);
+            selesai($_POST, $index);
         }
     }
 
@@ -55,7 +55,7 @@
             </div>
             <?php foreach ($text as $index => $isi):?>
             <div class="show-todo">
-                <input type="text" name = "isi<?php echo $index;?>" value="<?php echo $isi['todolist']; ?>" class="<?php echo $kls;?>" >
+                <input type="text" name = "isi<?php echo $index;?>" value="<?php echo $isi['todolist']; ?>" class="<?php echo $isi['status'];?>" >
                 <button class="tambah" name= "selesai<?php echo $index;?>">Selesai</button>
                 <button class="tambah" name= "hapus<?php echo $index;?>">Hapus</button>
                 <input type="hidden" name="index" value="<?php echo $index; ?>">

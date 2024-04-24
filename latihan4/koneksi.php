@@ -81,6 +81,5 @@
         $isi = $data['isi'.$index];
         $query = "UPDATE todo SET status = 'selesai' WHERE todolist = '$isi'";
         mysqli_query($conn,$query);
-        return 'selesai';
     }
 ?>
