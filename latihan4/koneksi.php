@@ -82,4 +82,8 @@
         $query = "UPDATE todo SET status = 'selesai' WHERE todolist = '$isi'";
         mysqli_query($conn,$query);
     }
+
+    function logout(){
+        
+    }
 ?>
