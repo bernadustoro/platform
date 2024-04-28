@@ -1,3 +1,8 @@
+body {
+    background: linear-gradient(to right, #437192, #3a96eb, #0d2399);
+    overflow-x: hidden;
+}
+
 .container {
     display: flex;
     flex-direction: column;
@@ -5,15 +10,67 @@
 }
 
 .tambah-todo {
+    background: linear-gradient(to right, #8c52ff, #1bdaff);
     display: flex;
-    gap: 5px;
-    border-bottom: 1px solid black;
     padding-left: 10px;
     padding-right: 10px;
-    padding-top: 10px;
+    padding-top: 30px;
     padding-bottom: 4px;
-    width: 7cm;
-    height: 20px;
+    margin-top: -10px;
+    margin-left: -10px;
+    width: 100%;
+    height: 60px;
+}
+
+.tambah-todo .input {
+    background-color: #d9d9d9;
+    margin-top: 1px;
+    height: 25.9px;
+    margin-left: 20cm;
+    width: 10cm;
+    border: 1px solid #000;
+    border-radius: 5px;
+}
+
+.tambah-todo .tambah {
+    background-color: #5ce1e6;
+    height: 30px;
+    width: 100px;
+    margin-left: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.tambah-todo .logout {
+    background-color: #5ce1e6;
+    height: 30px;
+    margin-left: 15cm;
+    width: 100px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.tampil {
+    height: auto;
+    margin-top: 1cm;
+    margin-left: 15cm;
+}
+
+.show-todo {
+    margin-bottom: 15px;
+}
+
+.show-todo #show {
+    width: 15cm;
+    height: 22px;
+}
+
+.show-todo .sel {
+    height: 25px;
+}
+
+.show-todo .hapus {
+    height: 25px;
 }
 
 .show-todo .selesai {

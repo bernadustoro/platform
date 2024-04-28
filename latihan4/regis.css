@@ -1,5 +1,9 @@
+body {
+    background: linear-gradient(to right, rgb(93, 174, 228), rgba(21, 176, 242), rgba(195, 207, 212));
+}
+
 .container {
-    background-color: aqua;
+    background-color: rgba(255, 255, 255, 0.3);
     width: 10cm;
     height: 10cm;
     position: absolute;
@@ -14,22 +18,30 @@
 }
 
 label {
+    margin-left: 10px;
     flex: 1;
 }
 
 .container h6 {
     text-align: center;
+    font-size: larger;
 }
 
 input[type="text"] {
     flex: 2;
     margin-right: 1cm;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    background-color: rgba(255, 255, 255, 0);
+    outline: none;
 }
 
 .submitbtn {
     position: absolute;
-    top: 40%;
+    top: 60%;
     left: 50%;
+    width: 2cm;
     transform: translateX(-50%);
     border-top-right-radius: 50px;
     border-bottom-right-radius: 50px;

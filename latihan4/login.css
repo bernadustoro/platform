@@ -1,13 +1,57 @@
+body {
+    background: linear-gradient(to right, rgb(93, 174, 228), rgba(21, 176, 242), rgba(195, 207, 212));
+}
+
+.bulat {
+    background-color: aliceblue;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    position: fixed;
+    top: 23%;
+    left: 37%;
+}
+
+.bulat2 {
+    background-color: aliceblue;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    position: fixed;
+    top: 23%;
+    left: 55.5%;
+}
+
+.bulat1 {
+    background-color: aliceblue;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    position: fixed;
+    top: 61%;
+    left: 37%;
+}
+
+.bulat3 {
+    background-color: aliceblue;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    position: fixed;
+    top: 61%;
+    left: 55.5%;
+}
+
 .container {
-    background-color: aqua;
-    display: flex;
-    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(0, 0, 0, 0.2);
     width: 10cm;
     height: 10cm;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .container h6 {
@@ -28,18 +72,18 @@ input[type="text"] {
     height: 20px;
     border: none;
     border-bottom: 1px solid black;
-    background-color: aqua;
+    background-color: rgba(255, 255, 255, 0);
     outline: none;
 }
 
 .regis {
     border: none;
     width: 2cm;
-    background-color: aqua;
+    background-color: rgba(255, 255, 255, 0);
     text-decoration: 1px underline red;
     color: rgb(199, 53, 53);
     position: absolute;
-    top: 50%;
+    top: 60%;
     left: 87%;
     transform: translateX(-50%);
 }
@@ -47,7 +91,30 @@ input[type="text"] {
 .Loginbtn {
     width: 2cm;
     position: absolute;
-    top: 60%;
+    top: 70%;
     left: 50%;
     transform: translateX(-50%);
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+}
+
+@media screen and (max-width: 768px) {
+    .bulat {
+        top: 23%;
+        left: 11%;
+    }
+    .bulat1 {
+        top: 61%;
+        left: 11%;
+    }
+    .bulat2 {
+        top: 23%;
+        left: 66.5%;
+    }
+    .bulat3 {
+        top: 61%;
+        left: 67%;
+    }
 }
