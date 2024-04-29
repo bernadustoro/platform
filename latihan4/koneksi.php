@@ -48,7 +48,7 @@ function tambahTodo($data, $username)
 function query($username)
 {
     global $conn;
-    $query = "SELECT todo.id_todo, todo.todolist, todo.status 
+    $query = "SELECT todo.id_todo, todo.todolist, todo.status
                   FROM todo 
                   JOIN user ON todo.user_id = user.id 
                   WHERE user.username = '$username'";

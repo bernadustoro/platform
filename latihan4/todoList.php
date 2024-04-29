@@ -53,17 +53,18 @@ $text = query($username);
 
 <body>
     <form action="" method="post">
-        <div class="container">
-            <div class="tambah-todo">
-                <input type="text" name="todo" placeholder="Teks todo" class="input">
-                <button class="tambah" name="tambah" class="tambah"> Tambah</button>
-                <button class="logout" name="logout" class="logout"> logout</button>
-            </div>
+
+        <div class="tambah-todo">
+            <input type="text" name="todo" placeholder="Teks todo" class="input" onkeydown="return event.key != 'Enter';">
+            <button class="tambah" name="tambah" class="tambah"> Tambah</button>
+            <h2 class="info"><?php echo $username; ?></h2>
+            <button class="logout" name="logout" class="logout"> logout</button>
         </div>
+
         <div class="tampil">
             <?php foreach ($text as $index => $isi) : ?>
                 <div class="show-todo">
-                    <input type="text" name="isi<?php echo $index; ?>" value="<?php echo $isi['todolist']; ?>" class="<?php echo $isi['status']; ?>" id="show">
+                    <input type="text" name="isi<?php echo $index; ?>" value="<?php echo $isi['todolist']; ?>" class="<?php echo $isi['status']; ?>" id="show" readonly onkeydown="return event.key != 'Enter';">
                     <button class="sel" name="selesai<?php echo $index; ?>">Selesai</button>
                     <button class="hapus" name="hapus<?php echo $index; ?>">Hapus</button>
                     <input type="hidden" name="index" value="<?php echo $index; ?>">
